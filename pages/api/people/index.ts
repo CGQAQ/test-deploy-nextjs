@@ -8,7 +8,7 @@ export default function handler(
   _req: NextApiRequest,
   res: NextApiResponse<Person[]>
 ) {
-  console.log("????????", _req);
+  console.log("????????", _req, typeof _req.body);
 
   console.log("ls", readdirSync(process.cwd()));
   return res.status(200).json(people)
